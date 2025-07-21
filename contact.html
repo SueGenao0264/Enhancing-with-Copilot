@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact me for inquiries, feedback, or collaboration opportunities.">
+    <meta name="keywords" content="contact, feedback, inquiries, collaboration">
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>Contact</title>
+</head>
+<body>
+     <header>
+        <div class="off-screen-menu">
+    <h1><a href="/" class="site-title">SJ Web Services</a></h1>
+        <div class="hamburger-menu">
+                <button id="hamburger-icon" aria-expanded="false" aria-controls="main-links" aria-label="Toggle Menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+    </div>
+                </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" title="Toggle navigation menu">
+                    <label for="nav-toggle" class="nav-toggle-label">
+                    <i class="fas fa-bars"></i>
+                  </label>
+                <ul class="nav-links">
+                    <li><a href="Homeindex.html" id="ham-home-link">Home</a></li>
+                    <li><a href="Aboutme.html" id="ham-about-link">About</a></li>
+                    <li><a href="Services.html" id="ham-services-link">Services</a></li>
+                    <li><a href="Project.html" id="ham-projects-link">Projects</a></li>
+                    <li><a href="articles.html" id="ham-articles-link">Articles</a></li>
+                    <li><a href="contact.html" id="ham-contact-link">Contact</a></li>
+                </ul>
+            </nav> 
+    </header>
+    <main>
+        <div class="contact-content">
+            <h2 class="contact-title">Contact Us</h2>
+            <p>If you have any questions, feedback, or collaboration opportunities, feel free to reach out!</p>
+            <p>We will review your message and get back to you as soon as possible.</p>
+            <p>For immediate assistance, you can also reach us at:</p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:info@sjwebservices.com">info@sjwebservices.com</a></li>
+            </ul>
+        </div>
+  <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <form class="contact-form" action="#" method="post">
+            <div>
+                <label for="name"></label>
+                <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+            </div>
+            <div>
+                <label for="message"> </label>
+                <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Enter your message"></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+        <script src="script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2025 SJ Web Services. All rights reserved.</p>
+</footer>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Development Services">
+    <meta name="keywords" content="Web Development, Services, HTML, CSS, JavaScript">
+    <title>Web Development Services</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+</head>
+<body>
+    <header>
+        <div class="off-screen-menu">
+    <h1><a href="/" class="site-title">SJ Web Services</a></h1>
+        <div class="hamburger-menu">
+                <button id="hamburger-icon" aria-expanded="false" aria-controls="main-links" aria-label="Toggle Menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+    </div>
+                </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" title="Toggle navigation menu">
+                    <label for="nav-toggle" class="nav-toggle-label">
+                    <i class="fas fa-bars"></i>
+                  </label>
+                <ul class="nav-links">
+                    <li><a href="Homeindex.html" id="ham-home-link">Home</a></li>
+                    <li><a href="Aboutme.html" id="ham-about-link">About</a></li>
+                    <li><a href="Services.html" id="ham-services-link">Services</a></li>
+                    <li><a href="Project.html" id="ham-projects-link">Projects</a></li>
+                    <li><a href="articles.html" id="ham-articles-link">Articles</a></li>
+                    <li><a href="contact.html" id="ham-contact-link">Contact</a></li>
+                </ul>
+            </nav> 
+    </header>
+    <main>
+    <section class="service-content">
+        <div class="services-content">
+            <h2 id="web_dev" class="web-dev-title">
+                <span>Web</span>
+                <span> Development</span>
+                <span> Services</span>
+            </h2>
+    <p id="web-dev-description" class="web-dev-description"> 
+        <div class="first-line">Why Us?&nbsp;</div><br>
+       <div class="second-line"> We offer a range of high-quality web development services to help you build and maintain your online presence</div><br>
+         <div class="third-line">Our team is dedicated to delivering exceptional results</div><br>
+       <div class="fourth-line"> Our services include:</div>
+    </p>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const headers = Array.from(document.querySelectorAll("#services-table thead th"));
+        document.querySelectorAll("#services-table tbody tr").forEach(row => {
+            Array.from(row.children).forEach((cell, i) => {
+                cell.setAttribute("data-label", headers[i].textContent);
+            });
+        });
+    });
+    </script>
+    <div class="table-container" id="services-table-container">
+<table class="services-table" id="services-table"> 
+    <thead>
+        <tr>
+            <th class="col-1">Development</th>
+            <th class="col-2">Integration & Optimization</th>
+            <th class="col-3">Support & Other Services</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="row">Website Design and Development</td>
+        <td class="row">Content Management System (CMS) Integration</td>
+        <td class="row">Responsive Web Design</td>
+    </tr>
+    <tr>
+        <td class="row">E-commerce Website Development</td>
+        <td class="row">Search Engine Optimization (SEO)</td>
+        <td class="row">Web Application Development</td>
+    </tr>
+    <tr>
+        <td class="row">Back-End Development (Node.js, PHP, Python, etc.)</td>
+        <td class="row">API Development and Integration</td>
+        <td class="row">Website Maintenance and Support</td>
+    </tr>
+    <tr>
+        <td class="row">Front-End Development (HTML, CSS, JavaScript)</td>
+        <td class="row">Performance Optimization</td>
+        <td class="row">Website Security Implementation</td>
+    </tr>
+    <tr>
+        <td class="row">Custom Plugin and Module Development</td>
+        <td class="row">UI/UX Design</td>
+        <td class="row">Domain and Hosting Setup</td>
+    </tr>
+</table>
+</div>
+    </section>
+    <footer>
+        <p>&copy; 2025 SJ Web Services. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of web development projects showcasing skills in HTML, CSS, and JavaScript.">
+        <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Web Development Projects</title>
+    <meta name="keywords" content="web development, projects, HTML, CSS, JavaScript, portfolio, productivity, weather, blog, recipe, gallery, quiz, finance, template, todo, movie, markdown, color">
+    <meta name="author" content="Sue Josie">
+</head>
+<body>
+     <header>
+        <div class="off-screen-menu">
+    <h1><a href="/" class="site-title">SJ Web Services</a></h1>
+        <div class="hamburger-menu">
+                <button id="hamburger-icon" aria-expanded="false" aria-controls="main-links" aria-label="Toggle Menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+    </div>
+                </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" title="Toggle navigation menu">
+                    <label for="nav-toggle" class="nav-toggle-label">
+                    <i class="fas fa-bars"></i>
+                  </label>
+                <ul class="nav-links">
+                    <li><a href="Homeindex.html" id="ham-home-link">Home</a></li>
+                    <li><a href="Aboutme.html" id="ham-about-link">About</a></li>
+                    <li><a href="Services.html" id="ham-services-link">Services</a></li>
+                    <li><a href="Project.html" id="ham-projects-link">Projects</a></li>
+                    <li><a href="articles.html" id="ham-articles-link">Articles</a></li>
+                    <li><a href="contact.html" id="ham-contact-link">Contact</a></li>
+                </ul>
+            </nav> 
+    </header>
+    <main>
+        <section class="projects-list">
+            <h2 class="project-title">Web Development Projects</h2>
+            <p class="project-description">Explore my web development projects that showcase my skills in HTML, CSS, and JavaScript.</p>
+        <div class="project-filters">
+            <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All</option>
+                    <option value="portfolio">Portfolio</option>
+                    <option value="productivity">Productivity</option>
+                    <option value="weather">Weather</option>
+                    <option value="blog">Blog</option>
+                    <option value="recipe">Recipe</option>
+                    <option value="gallery">Gallery</option>
+                    <option value="quiz">Quiz</option>
+                    <option value="finance">Finance</option>
+                    <option value="template">Template</option>
+                    <option value="todo">To-Do</option>
+                    <option value="movie">Movie</option>
+                    <option value="markdown">Markdown</option>
+                    <option value="color">Color</option>
+                </select>
+                <input type="text" id="project-search" placeholder="Search projects...">
+                <button id="search-btn">Search</button>
+            </div>
+            <ul id="projects-ul"></ul>
+        </section>
+    </main>
+    <script>
+    // Project data
+    const projects = [ 
+        {
+            title: "Personal Portfolio Website",
+            description: "A responsive portfolio site built with HTML, CSS, and JavaScript to showcase my web development skills and projects.",
+            url: "https://github.com/yourusername/portfolio",
+            categories: ["portfolio"],
+            figure: "https://via.placeholder.com/300x180?text=Portfolio"
+        },
+        {
+            title: "Task Manager App",
+            description: "A simple task management application using vanilla JavaScript, allowing users to add, edit, and delete tasks.",
+            url: "https://github.com/yourusername/task-manager",
+            categories: ["productivity", "todo"],
+            figure: "https://via.placeholder.com/300x180?text=Task+Manager"
+        },
+        {
+            title: "Weather Dashboard",
+            description: "An interactive weather dashboard that fetches real-time weather data from a public API and displays it with dynamic visuals.",
+            url: "https://github.com/yourusername/weather-dashboard",
+            categories: ["weather"],
+            figure: "https://via.placeholder.com/300x180?text=Weather+Dashboard"
+        },
+        {
+            title: "Blog Platform",
+            description: "A multi-page blog platform with user authentication, post creation, and comment features using HTML, CSS, and JavaScript.",
+            url: "https://github.com/yourusername/blog-platform",
+            categories: ["blog"],
+            figure: "https://via.placeholder.com/300x180?text=Blog+Platform"
+        },
+        {
+            title: "Recipe Finder",
+            description: "A web app that allows users to search for recipes by ingredients, using a third-party API and displaying results dynamically.",
+            url: "https://github.com/yourusername/recipe-finder",
+            categories: ["recipe"],
+            figure: "https://via.placeholder.com/300x180?text=Recipe+Finder"
+        },
+        {
+            title: "Responsive Photo Gallery",
+            description: "A responsive photo gallery with filtering and lightbox features, built with HTML, CSS Grid, and JavaScript.",
+            url: "https://github.com/yourusername/photo-gallery",
+            categories: ["gallery"],
+            figure: "https://via.placeholder.com/300x180?text=Photo+Gallery"
+        },
+        {
+            title: "Quiz App",
+            description: "An interactive quiz application with multiple categories, scoring, and feedback, developed using JavaScript.",
+            url: "https://github.com/yourusername/quiz-app",
+            categories: ["quiz"],
+            figure: "https://via.placeholder.com/300x180?text=Quiz+App"
+        },
+        {
+            title: "Expense Tracker",
+            description: "A simple expense tracker that helps users manage their finances by tracking income and expenses.",
+            url: "https://github.com/yourusername/expense-tracker",
+            categories: ["finance"],
+            figure: "https://via.placeholder.com/300x180?text=Expense+Tracker"
+        },
+        {
+            title: "Landing Page Template",
+            description: "A modern, mobile-friendly landing page template suitable for startups and small businesses.",
+            url: "https://github.com/yourusername/landing-page",
+            categories: ["template"],
+            figure: "https://via.placeholder.com/300x180?text=Landing+Page"
+        },
+        {
+            title: "To-Do List App",
+            description: "A classic to-do list application with local storage support and a clean, intuitive UI.",
+            url: "https://github.com/yourusername/todo-list",
+            categories: ["todo", "productivity"],
+            figure: "https://via.placeholder.com/300x180?text=To-Do+List"
+        },
+        {
+            title: "Movie Search App",
+            description: "A web app that allows users to search for movies and view details using the OMDb API.",
+            url: "https://github.com/yourusername/movie-search",
+            categories: ["movie"],
+            figure: "https://via.placeholder.com/300x180?text=Movie+Search"
+        },
+        {
+            title: "Markdown Previewer",
+            description: "A live Markdown previewer that converts Markdown input into formatted HTML in real time.",
+            url: "https://github.com/yourusername/markdown-previewer",
+            categories: ["markdown"],
+            figure: "https://via.placeholder.com/300x180?text=Markdown+Previewer"
+        },
+        {
+            title: "Color Palette Generator",
+            description: "A tool for generating and saving color palettes for web design projects.",
+            url: "https://github.com/yourusername/color-palette-generator",
+            categories: ["color"],
+            figure: "https://via.placeholder.com/300x180?text=Color+Palette"
+        }
+    ];
+
+    function renderProjects(filteredProjects) {
+        const ul = document.getElementById('projects-ul');
+        ul.innerHTML = '';
+        if (filteredProjects.length === 0) {
+            ul.innerHTML = '<li>No projects found.</li>';
+            return;
+        }
+        filteredProjects.forEach(project => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <a href="${project.url}" target="_blank" rel="noopener">View on GitHub</a>
+            `;
+            ul.appendChild(li);
+        });
+    }
+
+    function filterProjects() {
+        const category = document.getElementById('category-filter').value;
+        const search = document.getElementById('project-search').value.trim().toLowerCase();
+
+        let filtered = projects.filter(project => {
+            // Category filter
+            const inCategory = category === 'all' || project.categories.includes(category);
+            // Search filter
+            const inSearch = project.title.toLowerCase().includes(search) ||
+                             project.description.toLowerCase().includes(search);
+            return inCategory && (search === '' || inSearch);
+        });
+
+        renderProjects(filtered);
+    }
+
+    document.getElementById('category-filter').addEventListener('change', filterProjects);
+    document.getElementById('search-btn').addEventListener('click', filterProjects);
+    document.getElementById('project-search').addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') filterProjects();
+    });
+
+    // Initial render
+    renderProjects(projects);
+    </script>
+    <footer>
+        <p>&copy; 2025 SJ Web Services. All rights reserved.</p>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
