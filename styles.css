@@ -773,11 +773,15 @@ nav {
         margin-bottom: 80px; /* Add bottom margin for spacing */
 
     }
-
+    .contact-section {
+        margin-top: 40px; /* Move the contact section higher up */
+    }
     .contact-form {
-        width: 600px; /* Make form take full width */
+        width: 100%; /* Make form take full width */
         margin: 0 auto; /* Center the form horizontally */
-        padding: 20px; /* Add padding for spacing */
+        max-width: 600px; /* Set a maximum width for the form */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        padding: 10px; /* Add padding for spacing */
         height: auto; /* Allow form to adjust height based on content */
         border-radius: 10px; /* Add rounded corners to the form */
         display: flex; /* Use flexbox for layout */
@@ -814,6 +818,10 @@ nav {
         .contact-form button {
             font-size: 0.9em; /* Adjust button font size for smaller screens */
             padding: 8px 12px; /* Adjust padding for smaller screens */
+        }
+        .contact-content {
+            max-width: 100%;
+            padding: 16px;
         }
     }
 
@@ -867,7 +875,15 @@ nav {
         font-weight: bold;
     }
     
+.contact-content {
+        display: block; /* Use block layout */
+        gap: 1px; /* Add space between elements */
+        max-width: 800px; /* Set a maximum width for the content */
+        margin: 20px auto; /* Center the content */
+        padding: 10px; /* Add padding for spacing */
+        border-radius: 10px; /* Add rounded corners */
 
+    }
     
     #contact button:hover {
         background-color: #1f5bb5;
